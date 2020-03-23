@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%= render "head.html", conn: @conn %>
+
+  <body>
+    <%= render "navigation.html", conn: @conn %>
+
+    <section class="main-content row expanded">
+      <%= render "alerts.html", conn: @conn %>
+
+      <section class="text-center image-overlay row content">
+        <%= render @view_module, @view_template, assigns %>
+      </section>
+
+      <section class="about expanded row">
+        <div class="social-media text-center">
+          <a href="https://twitter.com/jmusa254"><i class="fi-social-twitter"></i></a>
+          <a href="https://web.facebook.com/juma.musa.737"><i class="fi-social-facebook"></i></a>
+        </div>
+      </section>
+    </section>
+
+    <%= render "script.html", conn: @conn %>
+  </body>
+</html>
